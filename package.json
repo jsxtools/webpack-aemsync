@@ -1,0 +1,55 @@
+{
+  "name": "webpack-aemsync",
+  "version": "0.1.0",
+  "description": "A webpack plugin to directly sync webpack with Adobe Experiment Manager (AEM)",
+  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "license": "CC0-1.0",
+  "repository": "jsxtools/monorepo",
+  "homepage": "https://github.com/jsxtools/webpack-aemsync#readme",
+  "bugs": "https://github.com/jsxtools/webpack-aemsync/issues",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "build:start": "rollup -c -w",
+    "test": "node -r esm test",
+    "test:start": "nodemon -r esm test"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "adm-zip": "^0.4.13",
+    "form-data": "^2.5.1",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@types/webpack": "^4.39.2",
+    "esm": "^3.2.25",
+    "nodemon": "^1.19.3",
+    "rollup": "^1.23.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-copy": "^3.1.0",
+    "rollup-plugin-terser": "^5.1.2",
+    "webpack": "^4.41.0"
+  },
+  "nodemonConfig": {
+    "events": {
+      "start": "clear"
+    },
+    "watch": [
+      "./*.json",
+      "./src/{*,**/*}.js",
+      "./test/*.js"
+    ]
+  },
+  "keywords": [
+    "adobe",
+    "aem",
+    "aemsync",
+    "experience",
+    "manager",
+    "webpack"
+  ]
+}
