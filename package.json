@@ -1,0 +1,84 @@
+{
+  "name": "webpack-aemsync",
+  "version": "0.1.0",
+  "description": "A webpack plugin to directly sync webpack with Adobe Experiment Manager (AEM)",
+  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "license": "CC0-1.0",
+  "repository": "jsxtools/monorepo",
+  "homepage": "https://github.com/jsxtools/webpack-aemsync#readme",
+  "bugs": "https://github.com/jsxtools/webpack-aemsync/issues",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "build:watch": "rollup -c -w",
+    "test": "run-s test:eslint test:tape",
+    "test:eslint": "eslint src/{**/*,*}.js --cache --ignore-path .gitignore --resolve-plugins-relative-to node_modules",
+    "test:tape": "node -r esm test",
+    "test:watch": "nodemon -r esm test -- --watch"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "adm-zip": "^0.4.13",
+    "form-data": "^2.5.1",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@types/webpack": "^4.39.2",
+    "eslint": "^6.5.1",
+    "esm": "^3.2.25",
+    "nodemon": "^1.19.3",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^1.23.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-copy": "^3.1.0",
+    "rollup-plugin-terser": "^5.1.2",
+    "webpack": "^4.41.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "globals": {
+      "Promise": true
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+        "impliedStrict": true
+      },
+      "ecmaVersion": 11,
+      "modules": true,
+      "sourceType": "module"
+    }
+  },
+  "nodemonConfig": {
+    "events": {
+      "start": "clear"
+    },
+    "watch": [
+      "./*.json",
+      "./src/{*,**/*}.js",
+      "./test/*.js"
+    ]
+  },
+  "keywords": [
+    "adobe",
+    "aem",
+    "aemsync",
+    "build",
+    "clientlib",
+    "config",
+    "configuration",
+    "experience",
+    "generator",
+    "manager",
+    "sync",
+    "synchronize",
+    "webpack"
+  ]
+}

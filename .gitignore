@@ -1,0 +1,10 @@
+clientlib.config.js
+dist
+node_modules
+package-lock.json
+test/jcr_root
+.*
+!.editorconfig
+!.gitignore
+!.vscode/**
+*.log*

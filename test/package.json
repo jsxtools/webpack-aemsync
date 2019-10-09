@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build": "clientlib --verbose"
+  },
+  "devDependencies": {
+    "aem-clientlib-generator": "^1.4.4"
+  }
+}

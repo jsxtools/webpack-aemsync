@@ -1,0 +1,23 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "package.json"
+      ],
+      "url": ".vscode/package.schema.json"
+    },
+    {
+      "fileMatch": [
+        "clientlib.config.js"
+      ],
+      "url": ".vscode/clientlib.config.schema.json"
+    },
+    {
+      "fileMatch": [
+        "clientlib.config.json"
+      ],
+      "url": ".vscode/clientlib.config.schema.json"
+    }
+  ],
+  "typescript.tsdk": null
+}
